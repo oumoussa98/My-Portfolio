@@ -1,0 +1,30 @@
+// Default variables
+html {
+  --base-font-size: 16px;
+}
+
+// Light default theme
+body {
+  --bg: #fff;
+  --bg-secondary: #e0e0e0;
+  --color: #444;
+  --link-color: #139c51;
+  --error: #f50606;
+  --space: 2rem;
+  --radius: 5px;
+}
+
+// Make  things smaller for mobile
+@media screen and (max-width: 650px) {
+  html {
+    --base-font-size: 14px;
+  }
+}
+
+// Override variables for Dark theme
+body[data-dark='true'] {
+  --bg: #2f495e;
+  --bg-secondary: #233849;
+  --error: #fa3838;
+  --color: #ced8de;
+}
