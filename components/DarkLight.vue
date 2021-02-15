@@ -92,7 +92,7 @@ export default {
 <style lang="scss">
 .toggle-theme {
   padding: 1px 4px;
-  margin: 0 10px 0 auto;
+  margin: 0 20px 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,7 +122,7 @@ export default {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: rgb(4, 206, 112);
+    background: rgb(16, 187, 115);
   }
 }
 body[data-dark='false'] {
