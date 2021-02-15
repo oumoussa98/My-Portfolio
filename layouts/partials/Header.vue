@@ -156,6 +156,7 @@ export default {
           height: 4px;
           border-radius: 4px;
           background: var(--color);
+          transition: all 0.3s;
         }
         &::before {
           position: absolute;
@@ -165,10 +166,11 @@ export default {
           height: 4px;
           border-radius: 4px;
           background: var(--color);
+          transition: all 0.3s;
         }
       }
       .burger-menu[data-show='true'] {
-        background: var(--bg);
+        background: transparent;
         &::after {
           top: -2px;
           transform: rotate(-45deg);
