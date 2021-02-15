@@ -63,3 +63,8 @@
     transform: scale(1);
   }
 }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #079469;
+  }
+}
