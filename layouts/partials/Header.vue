@@ -14,6 +14,7 @@
     <!-------- Links area ------>
     <div class="links">
       <NuxtLink v-for="(link, i) in links" :key="i" class="link" :to="link.to">
+        <v-icon :id="'icon' + i" :name="link.icon" :scale="link.scale" />
         {{ link.name }}
       </NuxtLink>
     </div>
@@ -36,10 +37,15 @@ export default {
     },
     // links --------------------
     links: [
-      { name: 'Home', to: '/' },
-      { name: 'About', to: '/about' },
-      { name: 'Contact', to: '/contact' },
-      { name: 'Blog', to: '/blog' },
+      { name: 'Home', to: '/', icon: 'fa-home' },
+      { name: 'About', to: '/about', icon: 'bi-info-circle-fill' },
+      {
+        name: 'Contact',
+        to: '/contact',
+        icon: 'ri-contacts-book-fill',
+        scale: 0.9,
+      },
+      { name: 'Blog', to: '/blog', icon: 'la-blog-solid' },
       //
     ],
 
@@ -69,10 +75,10 @@ export default {
   width: 100%;
   display: flex;
   align-items: center;
+  padding: 16px 24px;
   transition: background-color 0.5s ease-in-out;
-  /* brand area */
   .brand {
-    min-width: 40%;
+    min-width: 34%;
     margin-left: 10px;
     display: flex;
     align-items: center;
@@ -90,8 +96,9 @@ export default {
   }
   /* links area */
   .links {
-    padding: 0 0 6px 0;
+    padding: 0 0 4px 0;
     border-bottom: 2px solid #14d89d;
+    font-size: 15px;
   }
   .burger-container {
     display: none;
@@ -103,12 +110,21 @@ export default {
     // transform: translateY(-1000%);
     color: var(--color);
   }
+  #icon0,
+  #icon1,
+  #icon2 {
+    margin: 1px 5px 0 0;
+  }
+  #icon3 {
+    margin: 0px 5px 0 0;
+  }
   .link:hover {
     animation: pulse 0.8s;
     box-shadow: 0 0 0 0.6em rgba(#fff, 0);
     color: #04a071;
   }
   @media only screen and (max-width: 800px) {
+    padding: unset;
     .brand {
       min-width: auto;
     }
