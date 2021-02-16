@@ -9,35 +9,35 @@
             target="_blank"
             class="social-link"
           >
-            <v-icon scale="1.3" name="bi-facebook"></v-icon>
+            <VIcon scale="1.3" name="bi-facebook"></VIcon>
           </a>
           <a
             href="https://www.twitter.com/oumoussa98"
             target="_blank"
             class="social-link"
           >
-            <v-icon scale="1.3" name="bi-twitter"></v-icon>
+            <VIcon scale="1.3" name="bi-twitter"></VIcon>
           </a>
           <a
             href="https://www.instagram.com/oumoussa98"
             target="_blank"
             class="social-link"
           >
-            <v-icon scale="1.3" name="bi-instagram"></v-icon>
+            <VIcon scale="1.3" name="bi-instagram"></VIcon>
           </a>
           <a
             href="https://www.github.com/oumoussa98"
             target="_blank"
             class="social-link"
           >
-            <v-icon scale="1.3" name="bi-github"></v-icon>
+            <VIcon scale="1.3" name="bi-github"></VIcon>
           </a>
           <a
             href="https://www.linkedin.com/in/abdelouahed-oumoussa-168838206/"
             target="_blank"
             class="social-link"
           >
-            <v-icon scale="1.3" name="bi-linkedin"></v-icon>
+            <VIcon scale="1.3" name="bi-linkedin"></VIcon>
           </a>
         </div>
       </div>
@@ -58,7 +58,7 @@
               target="_blank"
               class="social-link"
             >
-              <v-icon scale="1.2" name="bi-github"></v-icon>
+              <VIcon scale="1.2" name="bi-github"></VIcon>
             </a>
           </p>
           <p>
@@ -68,7 +68,7 @@
               target="_blank"
               class="social-link"
             >
-              <v-icon scale="1.2" name="si-netlify" color="#3398DB"></v-icon>
+              <VIcon scale="1.2" name="si-netlify" color="#3398DB"></VIcon>
             </a>
           </p>
         </div>
