@@ -42,6 +42,12 @@ export default {
     '@nuxt/content',
   ],
 
+  loadingIndicator: {
+    name: 'folding-cube',
+    color: '#ffffff',
+    background: '#2f495e',
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
