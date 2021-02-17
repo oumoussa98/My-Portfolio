@@ -1,22 +1,26 @@
-@keyframes scaleDiv {
+@keyframes smoothDisplay {
   0% {
-    transform: rotate(0) scale(0.2);
+    transform: translateY(-30px);
     opacity: 0.2;
   }
   20% {
-    transform: scale(0.4);
+    transform: translateY(-20px);
     opacity: 0.4;
   }
   40% {
-    transform: scale(0.6);
+    transform: translateY(-15px);
     opacity: 0.6;
   }
   60% {
-    transform: scale(0.8);
+    transform: translateY(-10px);
     opacity: 0.8;
   }
   80% {
-    transform: scale(1);
+    transform: translateY(-6px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-2px);
     opacity: 1;
   }
 }

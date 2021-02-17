@@ -27,6 +27,8 @@ import {
   ViFileTypeGridsome,
   ViFileTypeWebpack,
   FcLinux,
+  OiLinkExternal,
+  LaHandshake,
 } from 'oh-vue-icons/icons'
 
 const icons = [
@@ -55,6 +57,8 @@ const icons = [
   ViFileTypeGridsome,
   ViFileTypeWebpack,
   FcLinux,
+  OiLinkExternal,
+  LaHandshake,
 ]
 
 OhVueIcon.add(icons)
