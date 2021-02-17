@@ -24,6 +24,10 @@ export default {
       'vi-file-type-js',
       'vi-file-type-nuxt',
       'vi-file-type-git',
+      'bi-github',
+      'vi-file-type-c',
+      'vi-file-type-cpp3',
+      'vi-file-type-php3',
       'vi-file-type-gridsome',
       'vi-file-type-webpack',
       'fc-linux',
@@ -44,7 +48,7 @@ export default {
 }
 
 .circle-container {
-  $particleNum: 16;
+  $particleNum: 25;
 
   position: absolute;
   transform: translateY(-10vh);
