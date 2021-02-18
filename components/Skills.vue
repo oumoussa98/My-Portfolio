@@ -325,5 +325,8 @@
       }
     }
   }
+  @media screen and (max-width: 800px) {
+    padding: 160px 20px 200px 20px;
+  }
 }
 </style>
