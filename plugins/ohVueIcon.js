@@ -26,9 +26,15 @@ import {
   ViFileTypeGit,
   ViFileTypeGridsome,
   ViFileTypeWebpack,
+  ViFileTypePhp3,
+  ViFileTypeC,
+  ViFileTypeCpp3,
   FcLinux,
   OiLinkExternal,
   LaHandshake,
+  SiBootstrap,
+  SiExpress,
+  ViFileTypeServerless,
 } from 'oh-vue-icons/icons'
 
 const icons = [
@@ -56,9 +62,15 @@ const icons = [
   ViFileTypeGit,
   ViFileTypeGridsome,
   ViFileTypeWebpack,
+  ViFileTypePhp3,
+  ViFileTypeC,
+  ViFileTypeCpp3,
   FcLinux,
   OiLinkExternal,
   LaHandshake,
+  SiBootstrap,
+  SiExpress,
+  ViFileTypeServerless,
 ]
 
 OhVueIcon.add(icons)
