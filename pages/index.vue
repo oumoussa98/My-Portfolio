@@ -50,6 +50,7 @@
         <div class="overlay"></div>
       </div>
     </section>
+    <Skills />
   </div>
 </template>
 
