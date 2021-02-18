@@ -6,6 +6,15 @@
     <div class="circle-container">
       <VIcon id="tech-icon" color="#AEDDFF" name="si-vuetify"></VIcon>
     </div>
+    <div class="circle-container">
+      <VIcon id="tech-icon" color="#7811F7" name="si-bootstrap"></VIcon>
+    </div>
+    <div class="circle-container">
+      <VIcon
+        style="background: white; color: black; margin: 0 10px 0 12px"
+        name="si-express"
+      />
+    </div>
   </div>
 </template>
 
@@ -48,7 +57,7 @@ export default {
 }
 
 .circle-container {
-  $particleNum: 25;
+  $particleNum: 22;
 
   position: absolute;
   transform: translateY(-10vh);
