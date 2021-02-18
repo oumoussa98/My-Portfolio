@@ -43,7 +43,7 @@
       </div>
       <div class="fullstack">
         <div class="frontend">
-          <h2 class="title">Frontend development</h2>
+          <h2 class="title fullstack__title">Frontend development</h2>
           <div class="fullstack__container">
             <div class="fullstack__content">
               <div class="frontend__tech fullstack__content__tech">
@@ -104,7 +104,7 @@
           </div>
         </div>
         <div class="backend">
-          <h2 class="title">Backend development</h2>
+          <h2 class="title fullstack__title">Backend development</h2>
           <div class="fullstack__container">
             <div class="fullstack__content">
               <div class="frontend__tech fullstack__content__tech">
@@ -267,6 +267,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    &__title {
+      width: 196px;
+    }
     .frontend,
     .backend {
       flex: 1 1 46%;
