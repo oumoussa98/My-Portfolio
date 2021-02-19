@@ -1,33 +1,28 @@
 <template>
-  <ClientOnly>
-    <div class="header">
-      <NuxtLink class="brand" :to="brand.to">
-        <img
-          class="brand-img"
-          src="~/assets/images/logo.svg"
-          alt="logo"
-          width="50"
-        />
-        <span>{{ brand.name }}</span>
+  <div class="header">
+    <!--              computer vesion                 -->
+    <!------- brand area ------>
+    <NuxtLink class="brand" :to="brand.to">
+      <img
+        class="brand-img"
+        src="~/assets/images/logo.svg"
+        alt="logo"
+        width="50"
+      />
+      <span>{{ brand.name }}</span>
+    </NuxtLink>
+    <!-------- Links area ------>
+    <div class="links">
+      <NuxtLink v-for="(link, i) in links" :key="i" class="link" :to="link.to">
+        <VIcon :id="'icon' + i" :name="link.icon" :scale="link.scale" />
+        {{ link.name }}
       </NuxtLink>
-      <!-------- Links area ------>
-      <div class="links">
-        <NuxtLink
-          v-for="(link, i) in links"
-          :key="i"
-          class="link"
-          :to="link.to"
-        >
-          <v-icon :id="'icon' + i" :name="link.icon" :scale="link.scale" />
-          {{ link.name }}
-        </NuxtLink>
-      </div>
-      <DarkLight />
-      <div class="burger-container" @click="toggleMenu">
-        <div role="button" class="burger-menu"></div>
-      </div>
     </div>
-  </ClientOnly>
+    <DarkLight />
+    <div class="burger-container" @click="toggleMenu">
+      <div role="button" class="burger-menu"></div>
+    </div>
+  </div>
 </template>
 
 <script>

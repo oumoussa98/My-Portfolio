@@ -1,4 +1,5 @@
 export default {
+  ssr: false,
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -40,6 +41,12 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
+
+  loadingIndicator: {
+    name: 'folding-cube',
+    color: '#ffffff',
+    background: '#2f495e',
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

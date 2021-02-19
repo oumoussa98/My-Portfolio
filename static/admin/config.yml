@@ -1,0 +1,23 @@
+backend:
+  name: github
+  branch: main
+  repo: oumoussa98/portfolio
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: 'projects'
+    label: 'Projects'
+    folder: 'content/side-projects'
+    format: 'frontmatter'
+    create: true
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Screenshot', name: 'img', widget: 'image' }
+      - { label: 'Github link', name: 'github', widget: 'string' }
+      - { label: 'Codepen link', name: 'codepen', widget: 'string' }
+      - { label: 'Netlify link', name: 'netlify', widget: 'string' }

@@ -1,85 +1,83 @@
 <template>
-  <ClientOnly>
-    <div class="footer">
-      <div class="section-1">
-        <div>
-          <h3>Get connected on</h3>
-          <div class="social-links">
-            <a
-              href="https://www.facebook.com/oumoussa98"
-              target="_blank"
-              class="social-link"
-            >
-              <v-icon scale="1.3" name="bi-facebook"></v-icon>
-            </a>
-            <a
-              href="https://www.twitter.com/oumoussa98"
-              target="_blank"
-              class="social-link"
-            >
-              <v-icon scale="1.3" name="bi-twitter"></v-icon>
-            </a>
-            <a
-              href="https://www.instagram.com/oumoussa98"
-              target="_blank"
-              class="social-link"
-            >
-              <v-icon scale="1.3" name="bi-instagram"></v-icon>
-            </a>
-            <a
-              href="https://www.github.com/oumoussa98"
-              target="_blank"
-              class="social-link"
-            >
-              <v-icon scale="1.3" name="bi-github"></v-icon>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/abdelouahed-oumoussa-168838206/"
-              target="_blank"
-              class="social-link"
-            >
-              <v-icon scale="1.3" name="bi-linkedin"></v-icon>
-            </a>
-          </div>
-        </div>
-        <div class="links">
-          <NuxtLink class="link" to="/">Home</NuxtLink>
-          <NuxtLink class="link" to="/about">About</NuxtLink>
-          <NuxtLink class="link" to="/contact">Contact</NuxtLink>
-          <NuxtLink class="link" to="/blog">Blog</NuxtLink>
-        </div>
-        <div class="other">
-          <p>The portfolio is open sourced under MIT license</p>
-          <p>Feel free to fork and customize as you like</p>
-          <div class="other__links">
-            <p>
-              Open sourced on
-              <a
-                href="https://github.com/oumoussa98/portfolio"
-                target="_blank"
-                class="social-link"
-              >
-                <v-icon scale="1.2" name="bi-github"></v-icon>
-              </a>
-            </p>
-            <p>
-              Deployed to
-              <a
-                href="https://www.netlify.com"
-                target="_blank"
-                class="social-link"
-              >
-                <v-icon scale="1.2" name="si-netlify" color="#3398DB"></v-icon>
-              </a>
-            </p>
-          </div>
+  <div class="footer">
+    <div class="section-1">
+      <div>
+        <h3>Get connected on</h3>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/oumoussa98"
+            target="_blank"
+            class="social-link"
+          >
+            <VIcon scale="1.3" name="bi-facebook"></VIcon>
+          </a>
+          <a
+            href="https://www.twitter.com/oumoussa98"
+            target="_blank"
+            class="social-link"
+          >
+            <VIcon scale="1.3" name="bi-twitter"></VIcon>
+          </a>
+          <a
+            href="https://www.instagram.com/oumoussa98"
+            target="_blank"
+            class="social-link"
+          >
+            <VIcon scale="1.3" name="bi-instagram"></VIcon>
+          </a>
+          <a
+            href="https://www.github.com/oumoussa98"
+            target="_blank"
+            class="social-link"
+          >
+            <VIcon scale="1.3" name="bi-github"></VIcon>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/abdelouahed-oumoussa-168838206/"
+            target="_blank"
+            class="social-link"
+          >
+            <VIcon scale="1.3" name="bi-linkedin"></VIcon>
+          </a>
         </div>
       </div>
-      <div class="section-2">
-        <p>&copy; {{ new Date().getFullYear() }} — <strong>Oumoussa</strong></p>
+      <div class="links">
+        <NuxtLink class="link" to="/">Home</NuxtLink>
+        <NuxtLink class="link" to="/about">About</NuxtLink>
+        <NuxtLink class="link" to="/contact">Contact</NuxtLink>
+        <NuxtLink class="link" to="/blog">Blog</NuxtLink>
+      </div>
+      <div class="other">
+        <p>The portfolio is open sourced under MIT license</p>
+        <p>Feel free to fork and customize as you like</p>
+        <div class="other__links">
+          <p>
+            Open sourced on
+            <a
+              href="https://github.com/oumoussa98/portfolio"
+              target="_blank"
+              class="social-link"
+            >
+              <VIcon scale="1.2" name="bi-github"></VIcon>
+            </a>
+          </p>
+          <p>
+            Deployed to
+            <a
+              href="https://www.netlify.com"
+              target="_blank"
+              class="social-link"
+            >
+              <VIcon scale="1.2" name="si-netlify" color="#3398DB"></VIcon>
+            </a>
+          </p>
+        </div>
       </div>
     </div>
-  </ClientOnly>
+    <div class="section-2">
+      <p>&copy; {{ new Date().getFullYear() }} — <strong>Oumoussa</strong></p>
+    </div>
+  </div>
 </template>
 
 <script>
