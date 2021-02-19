@@ -251,10 +251,10 @@ export default {
   }
   .load-more-container {
     width: 600px;
+    margin: 40px 0 50px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px 0 50px 0;
     .load-more-btn {
       padding: 10px 30px;
       border: none;
