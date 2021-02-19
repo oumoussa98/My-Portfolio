@@ -35,6 +35,8 @@ import {
   SiBootstrap,
   SiExpress,
   ViFileTypeServerless,
+  SiCodepen,
+  RiLoaderFill,
 } from 'oh-vue-icons/icons'
 
 const icons = [
@@ -71,6 +73,8 @@ const icons = [
   SiBootstrap,
   SiExpress,
   ViFileTypeServerless,
+  SiCodepen,
+  RiLoaderFill,
 ]
 
 OhVueIcon.add(icons)
