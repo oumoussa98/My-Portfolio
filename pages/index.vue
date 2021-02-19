@@ -51,6 +51,7 @@
       </div>
     </section>
     <Skills />
+    <SideProjects />
   </div>
 </template>
 
