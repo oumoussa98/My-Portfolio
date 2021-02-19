@@ -5,11 +5,11 @@ html {
 
 // Light default theme
 body {
-  --bg: #fff;
-  --bg-secondary: #e0e0e0;
-  --color: #444;
-  --link-color: #139c51;
-  --error: #f50606;
+  --bg: #2f495e;
+  --bg-secondary: #233849;
+  --error: #fa3838;
+  --color: #ced8de;
+
   --space: 2rem;
   --radius: 5px;
 }
@@ -22,9 +22,9 @@ body {
 }
 
 // Override variables for Dark theme
-body[data-dark='true'] {
-  --bg: #2f495e;
-  --bg-secondary: #233849;
-  --error: #fa3838;
-  --color: #ced8de;
+body[data-light='true'] {
+  --bg: #fff;
+  --bg-secondary: #e0e0e0;
+  --color: #444;
+  --error: #f50606;
 }

@@ -3,7 +3,7 @@
     role="button"
     aria-label="Toggle dark/light"
     class="toggle-theme"
-    @click="darkModeToggle"
+    @click="themeToggle"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -47,43 +47,24 @@
 
 <script>
 export default {
-  // Data =================================
-  data: () => ({
-    // light and dark mode
-    darkMode: true,
-  }),
   mounted() {
-    // check for saved 'darkMode' in localStorage
-    this.darkMode = localStorage.getItem('darkMode')
-    // If the user already visited and enabled darkMode
-    // start things off with it on
-    if (this.darkMode === 'enabled') this.enableDarkMode()
+    const lightMode = localStorage.getItem('lightMode')
+    if (lightMode === 'enabled') this.enableLightMode()
   },
-  // Methods =====================================
   methods: {
-    enableDarkMode() {
-      // 1. Add the class to the body
-      document.body.setAttribute('data-dark', true)
-      // 2. Update darkMode in localStorage
-      localStorage.setItem('darkMode', 'enabled')
-      this.darkMode = true
+    enableLightMode() {
+      document.body.setAttribute('data-light', true)
+      localStorage.setItem('lightMode', 'enabled')
     },
-    disableDarkMode() {
-      // 1. Remove the class from the body
-      document.body.setAttribute('data-dark', false)
-      // 2. Update darkMode in localStorage
-      localStorage.setItem('darkMode', 'disabled')
-      this.darkMode = false
+    disableLightMode() {
+      document.body.removeAttribute('data-light')
+      localStorage.setItem('lightMode', 'disabled')
     },
-    // toggle between dark and light mode
-    darkModeToggle() {
-      // get their darkMode setting
-      this.darkMode = localStorage.getItem('darkMode')
-      // if it not current enabled, enable it
-      if (this.darkMode !== 'enabled') {
-        this.enableDarkMode()
-        // if it has been enabled, turn it off
-      } else this.disableDarkMode()
+    themeToggle() {
+      const lightMode = localStorage.getItem('lightMode')
+      if (lightMode !== 'enabled') {
+        this.enableLightMode()
+      } else this.disableLightMode()
     },
   },
 }
@@ -125,7 +106,7 @@ export default {
     background: rgb(16, 187, 115);
   }
 }
-body[data-dark='false'] {
+body[data-light='true'] {
   .switcher {
     &::after {
       right: 100%;
