@@ -16,7 +16,7 @@
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/pwa": "^3.3.5",
     "animejs": "^3.2.1",
-    "core-js": "^3.8.3",
+    "core-js": "^3.9.0",
     "nuxt": "^2.15.0",
     "oh-vue-icons": "^0.1.9"
   },
