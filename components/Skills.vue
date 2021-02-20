@@ -6,7 +6,9 @@
       <div class="programing-languages">
         <div class="lang lang1">
           <div class="lang__title lang__title1">
-            <VIcon id="icon" scale="4" name="vi-file-type-php3" />
+            <ClientOnly>
+              <VIcon id="icon" scale="4" name="vi-file-type-php3" />
+            </ClientOnly>
             <span class="lang__name">PHP</span>
           </div>
           <span class="lang__desc">
@@ -17,8 +19,12 @@
         </div>
         <div class="lang">
           <div class="lang__title lang__title2">
-            <VIcon id="icon" scale="3" name="vi-file-type-c" />&
-            <VIcon id="icon" scale="3" name="vi-file-type-cpp3" />
+            <ClientOnly>
+              <VIcon id="icon" scale="3" name="vi-file-type-c" />&
+
+              <VIcon id="icon" scale="3" name="vi-file-type-cpp3" />
+            </ClientOnly>
+
             <span class="lang__name">C and C++</span>
           </div>
           <span class="lang__desc">
@@ -30,7 +36,9 @@
         </div>
         <div class="lang">
           <div class="lang__title">
-            <VIcon id="icon" scale="4" name="vi-file-type-js" />
+            <ClientOnly>
+              <VIcon id="icon" scale="4" name="vi-file-type-js" />
+            </ClientOnly>
             <span class="lang__name">Javascript</span>
           </div>
           <span class="lang__desc">
@@ -48,10 +56,15 @@
             <div class="fullstack__content">
               <div class="frontend__tech fullstack__content__tech">
                 <span>
-                  <VIcon scale="2" name="vi-file-type-html" />
-                  <VIcon scale="2" name="vi-file-type-css" />
+                  <ClientOnly>
+                    <VIcon scale="2" name="vi-file-type-html" />
+
+                    <VIcon scale="2" name="vi-file-type-css" />
+                  </ClientOnly>
                   <a href="https://sass-lang.com/" target="_blank">
-                    <VIcon scale="2" name="vi-file-type-scss" />
+                    <ClientOnly>
+                      <VIcon scale="2" name="vi-file-type-scss" />
+                    </ClientOnly>
                   </a>
 
                   <span>
@@ -63,39 +76,49 @@
 
               <div class="frontend__tech fullstack__content__tech">
                 <a href="https://vuejs.org/" target="_blank">
-                  <VIcon scale="2" name="vi-file-type-vue" />
+                  <ClientOnly>
+                    <VIcon scale="2" name="vi-file-type-vue" />
+                  </ClientOnly>
                   <span class="fullstack__content__tech__name">Vuejs</span>
                 </a>
                 The Progressive JavaScript Framework
               </div>
               <div class="frontend__tech fullstack__content__tech">
                 <a href="https://vuetifyjs.com/" target="_blank">
-                  <VIcon scale="2" name="si-vuetify" color="#7BC6FF" />
+                  <ClientOnly>
+                    <VIcon scale="2" name="si-vuetify" color="#7BC6FF" />
+                  </ClientOnly>
                   <span class="fullstack__content__tech__name">Vuetifyjs</span>
                 </a>
                 Vue UI Library
               </div>
               <div class="frontend__tech fullstack__content__tech">
                 <a href="https://getbootstrap.com/" target="_blank">
-                  <VIcon scale="2" name="si-bootstrap" color="#7811F7" />
+                  <ClientOnly>
+                    <VIcon scale="2" name="si-bootstrap" color="#7811F7" />
+                  </ClientOnly>
                   <span class="fullstack__content__tech__name">Bootstrap</span>
                 </a>
                 The most popular HTML, CSS, and JS library
               </div>
               <div class="frontend__tech fullstack__content__tech">
                 <a href="https://gridsome.org/" target="_blank">
-                  <VIcon
-                    scale="1.8"
-                    name="vi-file-type-gridsome"
-                    color="#7BC6FF"
-                  />
+                  <ClientOnly>
+                    <VIcon
+                      scale="1.8"
+                      name="vi-file-type-gridsome"
+                      color="#7BC6FF"
+                    />
+                  </ClientOnly>
                   <span class="fullstack__content__tech__name">Gridsome</span>
                 </a>
                 A Jamstack framework for Vue.js
               </div>
               <div class="frontend__tech fullstack__content__tech">
                 <a href="https://nuxtjs.org/" target="_blank">
-                  <VIcon scale="1.8" name="vi-file-type-nuxt" />
+                  <ClientOnly>
+                    <VIcon scale="1.8" name="vi-file-type-nuxt" />
+                  </ClientOnly>
                   <span class="fullstack__content__tech__name">Nuxtjs</span>
                 </a>
                 The Intuitive Vue Framework
@@ -109,43 +132,53 @@
             <div class="fullstack__content">
               <div class="frontend__tech fullstack__content__tech">
                 <a href="https://nodejs.org/" target="_blank">
-                  <VIcon scale="2" name="vi-file-type-node" />
+                  <ClientOnly>
+                    <VIcon scale="2" name="vi-file-type-node" />
+                  </ClientOnly>
                   <span class="fullstack__content__tech__name">Nodejs</span>
                 </a>
                 Back-end JavaScript runtime environment
               </div>
               <div class="frontend__tech fullstack__content__tech">
                 <a href="https://expressjs.com/" target="_blank">
-                  <VIcon
-                    style="
-                      background: white;
-                      color: black;
-                      margin: 0 10px 0 12px;
-                    "
-                    scale="1.6"
-                    name="si-express"
-                  />
+                  <ClientOnly>
+                    <VIcon
+                      style="
+                        background: white;
+                        color: black;
+                        margin: 0 10px 0 12px;
+                      "
+                      scale="1.6"
+                      name="si-express"
+                    />
+                  </ClientOnly>
                   <span class="fullstack__content__tech__name">Expressjs</span>
                 </a>
                 Fast, unopinionated, minimalist web framework for Node.js
               </div>
               <div class="frontend__tech fullstack__content__tech">
                 <a href="https://www.mongodb.com/" target="_blank">
-                  <VIcon scale="2" name="vi-file-type-mongo" />
+                  <ClientOnly>
+                    <VIcon scale="2" name="vi-file-type-mongo" />
+                  </ClientOnly>
                   <span class="fullstack__content__tech__name">MongoDB</span>
                 </a>
                 General purpose, document-based, distributed database
               </div>
               <div class="frontend__tech fullstack__content__tech">
                 <a href="https://www.mysql.com/" target="_blank">
-                  <VIcon scale="2" name="vi-file-type-mysql" />
+                  <ClientOnly>
+                    <VIcon scale="2" name="vi-file-type-mysql" />
+                  </ClientOnly>
                   <span class="fullstack__content__tech__name">MySql</span>
                 </a>
                 Relational database management system
               </div>
               <div class="frontend__tech fullstack__content__tech">
                 <a href="https://www.serverless.com/" target="_blank">
-                  <VIcon scale="2" name="vi-file-type-serverless" />
+                  <ClientOnly>
+                    <VIcon scale="2" name="vi-file-type-serverless" />
+                  </ClientOnly>
                   <span class="fullstack__content__tech__name">Serverless</span>
                 </a>
                 <span>

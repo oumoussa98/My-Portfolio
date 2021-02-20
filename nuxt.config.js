@@ -1,5 +1,4 @@
 export default {
-  ssr: false,
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -9,7 +8,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Abdelouahed oumoussa a self-taught javascript developer from morocco, interested in jamstack and new web technologies',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
