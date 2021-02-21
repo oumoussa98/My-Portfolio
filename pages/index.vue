@@ -7,13 +7,15 @@
       <div>
         <div class="intro">
           <h1 class="hi">Hi there!</h1>
-          <VIcon
-            scale="3"
-            name="la-handshake"
-            animation="wrench"
-            speed="slow"
-            hover
-          />
+          <ClientOnly>
+            <VIcon
+              scale="3"
+              name="la-handshake"
+              animation="wrench"
+              speed="slow"
+              hover
+            />
+          </ClientOnly>
           <h1 class="name">I'm Abdelouahed Oumoussa</h1>
           <p class="bio">
             A junior self-taught full-stack javascript developer from morocco,
