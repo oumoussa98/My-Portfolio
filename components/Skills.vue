@@ -4,48 +4,21 @@
     <div class="skills__desc">
       <h2 class="title">Programming languages</h2>
       <div class="programing-languages">
-        <div class="lang lang1">
-          <div class="lang__title lang__title1">
+        <div v-for="(lang, i) in data.languages" :key="lang.name" class="lang">
+          <div :class="'lang__title lang__title' + (i + 1)">
             <ClientOnly>
-              <VIcon id="icon" scale="4" name="vi-file-type-php3" />
+              <VIcon
+                v-for="(icon, i) in lang.icons"
+                id="icon"
+                :key="i"
+                :scale="lang.iconScale"
+                :name="icon"
+              />
             </ClientOnly>
-            <span class="lang__name">PHP</span>
+            <span class="lang__name">{{ lang.name }}</span>
           </div>
           <span class="lang__desc">
-            The first one I started with, I built some websites with it, Also I
-            tried its laravel framework which I really liked even though I
-            didn't like PHP syntax
-          </span>
-        </div>
-        <div class="lang">
-          <div class="lang__title lang__title2">
-            <ClientOnly>
-              <VIcon id="icon" scale="3" name="vi-file-type-c" />&
-
-              <VIcon id="icon" scale="3" name="vi-file-type-cpp3" />
-            </ClientOnly>
-
-            <span class="lang__name">C and C++</span>
-          </div>
-          <span class="lang__desc">
-            I started C++ at university first, but I learned more about it
-            after, I also learned some C as well since C++ is a superset of C,
-            whenever I get bored or not feeling good you'll find me playing with
-            these languages
-          </span>
-        </div>
-        <div class="lang">
-          <div class="lang__title">
-            <ClientOnly>
-              <VIcon id="icon" scale="4" name="vi-file-type-js" />
-            </ClientOnly>
-            <span class="lang__name">Javascript</span>
-          </div>
-          <span class="lang__desc">
-            Currently, trying to deep dive into it and get more comfortable with
-            it and its ecosystem I like the idea of one codebase for multiple
-            platforms it saves time and money and it fits nicely for small to
-            medium projects
+            {{ lang.description }}
           </span>
         </div>
       </div>
@@ -54,74 +27,26 @@
           <h2 class="title fullstack__title">Frontend development</h2>
           <div class="fullstack__container">
             <div class="fullstack__content">
-              <div class="frontend__tech fullstack__content__tech">
-                <span>
-                  <ClientOnly>
-                    <VIcon scale="2" name="vi-file-type-html" />
-
-                    <VIcon scale="2" name="vi-file-type-css" />
-                  </ClientOnly>
-                  <a href="https://sass-lang.com/" target="_blank">
-                    <ClientOnly>
-                      <VIcon scale="2" name="vi-file-type-scss" />
-                    </ClientOnly>
-                  </a>
-
-                  <span>
-                    HTML, CSS and
-                    <a href="https://sass-lang.com/" target="_blank">SASS</a>
-                  </span>
-                </span>
-              </div>
-
-              <div class="frontend__tech fullstack__content__tech">
-                <a href="https://vuejs.org/" target="_blank">
-                  <ClientOnly>
-                    <VIcon scale="2" name="vi-file-type-vue" />
-                  </ClientOnly>
-                  <span class="fullstack__content__tech__name">Vuejs</span>
-                </a>
-                The Progressive JavaScript Framework
-              </div>
-              <div class="frontend__tech fullstack__content__tech">
-                <a href="https://vuetifyjs.com/" target="_blank">
-                  <ClientOnly>
-                    <VIcon scale="2" name="si-vuetify" color="#7BC6FF" />
-                  </ClientOnly>
-                  <span class="fullstack__content__tech__name">Vuetifyjs</span>
-                </a>
-                Vue UI Library
-              </div>
-              <div class="frontend__tech fullstack__content__tech">
-                <a href="https://getbootstrap.com/" target="_blank">
-                  <ClientOnly>
-                    <VIcon scale="2" name="si-bootstrap" color="#7811F7" />
-                  </ClientOnly>
-                  <span class="fullstack__content__tech__name">Bootstrap</span>
-                </a>
-                The most popular HTML, CSS, and JS library
-              </div>
-              <div class="frontend__tech fullstack__content__tech">
-                <a href="https://gridsome.org/" target="_blank">
+              <div
+                v-for="tech in data.frontend"
+                :key="tech.name"
+                class="frontend__tech fullstack__content__tech"
+              >
+                <a :href="tech.href" target="_blank">
                   <ClientOnly>
                     <VIcon
+                      v-for="icon in tech.icons"
+                      :key="icon"
                       scale="1.8"
-                      name="vi-file-type-gridsome"
-                      color="#7BC6FF"
+                      :name="icon"
+                      :color="tech.iconColor"
                     />
                   </ClientOnly>
-                  <span class="fullstack__content__tech__name">Gridsome</span>
+                  <span class="fullstack__content__tech__name">
+                    {{ tech.name }}
+                  </span>
                 </a>
-                A Jamstack framework for Vue.js
-              </div>
-              <div class="frontend__tech fullstack__content__tech">
-                <a href="https://nuxtjs.org/" target="_blank">
-                  <ClientOnly>
-                    <VIcon scale="1.8" name="vi-file-type-nuxt" />
-                  </ClientOnly>
-                  <span class="fullstack__content__tech__name">Nuxtjs</span>
-                </a>
-                The Intuitive Vue Framework
+                <span v-html="tech.description"></span>
               </div>
             </div>
           </div>
@@ -130,68 +55,20 @@
           <h2 class="title fullstack__title">Backend development</h2>
           <div class="fullstack__container">
             <div class="fullstack__content">
-              <div class="frontend__tech fullstack__content__tech">
-                <a href="https://nodejs.org/" target="_blank">
+              <div
+                v-for="tech in data.backend"
+                :key="tech.name"
+                class="frontend__tech fullstack__content__tech"
+              >
+                <a :href="tech.href" target="_blank">
                   <ClientOnly>
-                    <VIcon scale="2" name="vi-file-type-node" />
+                    <VIcon scale="2" :name="tech.icon" />
                   </ClientOnly>
-                  <span class="fullstack__content__tech__name">Nodejs</span>
+                  <span class="fullstack__content__tech__name">
+                    {{ tech.name }}
+                  </span>
                 </a>
-                Back-end JavaScript runtime environment
-              </div>
-              <div class="frontend__tech fullstack__content__tech">
-                <a href="https://expressjs.com/" target="_blank">
-                  <ClientOnly>
-                    <VIcon
-                      style="
-                        background: white;
-                        color: black;
-                        margin: 0 10px 0 12px;
-                      "
-                      scale="1.6"
-                      name="si-express"
-                    />
-                  </ClientOnly>
-                  <span class="fullstack__content__tech__name">Expressjs</span>
-                </a>
-                Fast, unopinionated, minimalist web framework for Node.js
-              </div>
-              <div class="frontend__tech fullstack__content__tech">
-                <a href="https://www.mongodb.com/" target="_blank">
-                  <ClientOnly>
-                    <VIcon scale="2" name="vi-file-type-mongo" />
-                  </ClientOnly>
-                  <span class="fullstack__content__tech__name">MongoDB</span>
-                </a>
-                General purpose, document-based, distributed database
-              </div>
-              <div class="frontend__tech fullstack__content__tech">
-                <a href="https://www.mysql.com/" target="_blank">
-                  <ClientOnly>
-                    <VIcon scale="2" name="vi-file-type-mysql" />
-                  </ClientOnly>
-                  <span class="fullstack__content__tech__name">MySql</span>
-                </a>
-                Relational database management system
-              </div>
-              <div class="frontend__tech fullstack__content__tech">
-                <a href="https://www.serverless.com/" target="_blank">
-                  <ClientOnly>
-                    <VIcon scale="2" name="vi-file-type-serverless" />
-                  </ClientOnly>
-                  <span class="fullstack__content__tech__name">Serverless</span>
-                </a>
-                <span>
-                  serverless with
-                  <a
-                    href="https://www.netlify.com/products/functions/"
-                    target="_blank"
-                  >
-                    netlify functions</a
-                  >
-                  it's a method of providing backend services on an as-used
-                  basis
-                </span>
+                <span v-html="tech.description"></span>
               </div>
             </div>
           </div>
@@ -200,7 +77,18 @@
     </div>
   </section>
 </template>
-
+<script>
+export default {
+  data: () => ({
+    data: {},
+  }),
+  async fetch() {
+    const data = await this.$content('skills').fetch()
+    this.data = data[0]
+    console.log(data)
+  },
+}
+</script>
 <style lang="scss">
 .skills {
   min-height: 100vh;
