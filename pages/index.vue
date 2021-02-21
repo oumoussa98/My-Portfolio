@@ -24,11 +24,13 @@
               target="_blank"
             >
               here
-              <VIcon
-                class="github-link__icon"
-                scale="1.2"
-                name="oi-link-external"
-              />
+              <ClientOnly>
+                <VIcon
+                  class="github-link__icon"
+                  scale="1.2"
+                  name="oi-link-external"
+                />
+              </ClientOnly>
             </a>
           </p>
         </div>
@@ -37,7 +39,9 @@
           <NuxtLink class="first" to="/contact">Get in touch</NuxtLink>
           <NuxtLink class="second" to="/resume.pdf" target="_blank">
             Download my resume
-            <VIcon scale="0.9" name="oi-link-external" />
+            <ClientOnly>
+              <VIcon scale="0.9" name="oi-link-external" />
+            </ClientOnly>
           </NuxtLink>
         </div>
       </div>
