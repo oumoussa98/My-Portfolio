@@ -6,13 +6,15 @@
       <div class="programing-languages">
         <div v-for="(lang, i) in data.languages" :key="lang.name" class="lang">
           <div :class="'lang__title lang__title' + (i + 1)">
-            <VIcon
-              v-for="(icon, i) in lang.icons"
-              id="icon"
-              :key="i"
-              :scale="lang.iconScale"
-              :name="icon"
-            />
+            <ClientOnly>
+              <VIcon
+                v-for="(icon, i) in lang.icons"
+                id="icon"
+                :key="i"
+                :scale="lang.iconScale"
+                :name="icon"
+              />
+            </ClientOnly>
             <span class="lang__name">{{ lang.name }}</span>
           </div>
           <span class="lang__desc">
@@ -31,13 +33,15 @@
                 class="frontend__tech fullstack__content__tech"
               >
                 <a :href="tech.href" target="_blank">
-                  <VIcon
-                    v-for="icon in tech.icons"
-                    :key="icon"
-                    scale="1.8"
-                    :name="icon"
-                    :color="tech.iconColor"
-                  />
+                  <ClientOnly>
+                    <VIcon
+                      v-for="icon in tech.icons"
+                      :key="icon"
+                      scale="1.8"
+                      :name="icon"
+                      :color="tech.iconColor"
+                    />
+                  </ClientOnly>
                   <span class="fullstack__content__tech__name">
                     {{ tech.name }}
                   </span>
