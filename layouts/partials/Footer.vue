@@ -5,39 +5,15 @@
         <h3>Get connected on</h3>
         <div class="social-links">
           <a
-            href="https://www.facebook.com/oumoussa98"
+            v-for="(social, i) in socials"
+            :key="i"
+            :href="social.href"
             target="_blank"
             class="social-link"
           >
-            <VIcon scale="1.3" name="bi-facebook"></VIcon>
-          </a>
-          <a
-            href="https://www.twitter.com/oumoussa98"
-            target="_blank"
-            class="social-link"
-          >
-            <VIcon scale="1.3" name="bi-twitter"></VIcon>
-          </a>
-          <a
-            href="https://www.instagram.com/oumoussa98"
-            target="_blank"
-            class="social-link"
-          >
-            <VIcon scale="1.3" name="bi-instagram"></VIcon>
-          </a>
-          <a
-            href="https://www.github.com/oumoussa98"
-            target="_blank"
-            class="social-link"
-          >
-            <VIcon scale="1.3" name="bi-github"></VIcon>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/abdelouahed-oumoussa-168838206/"
-            target="_blank"
-            class="social-link"
-          >
-            <VIcon scale="1.3" name="bi-linkedin"></VIcon>
+            <ClientOnly>
+              <VIcon scale="1.3" :name="social.icon"></VIcon>
+            </ClientOnly>
           </a>
         </div>
       </div>
@@ -58,7 +34,9 @@
               target="_blank"
               class="social-link"
             >
-              <VIcon scale="1.2" name="bi-github"></VIcon>
+              <ClientOnly>
+                <VIcon scale="1.2" name="bi-github"></VIcon>
+              </ClientOnly>
             </a>
           </p>
           <p>
@@ -68,7 +46,9 @@
               target="_blank"
               class="social-link"
             >
-              <VIcon scale="1.2" name="si-netlify" color="#3398DB"></VIcon>
+              <ClientOnly>
+                <VIcon scale="1.2" name="si-netlify" color="#3398DB"></VIcon>
+              </ClientOnly>
             </a>
           </p>
         </div>
@@ -81,7 +61,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data: () => ({
+    socials: [
+      { href: 'https://www.facebook.com/oumoussa98', icon: 'bi-facebook' },
+      { href: 'https://www.twitter.com/oumoussa98', icon: 'bi-twitter' },
+      { href: 'https://www.instagram.com/oumoussa98', icon: 'bi-instagram' },
+      { href: 'https://www.github.com/oumoussa98', icon: 'bi-github' },
+      {
+        href: 'https://www.linkedin.com/in/abdelouahed-oumoussa-168838206/',
+        icon: 'bi-linkedin',
+      },
+    ],
+  }),
+}
 </script>
 
 <style lang="scss">

@@ -14,7 +14,9 @@
     <!-------- Links area ------>
     <div class="links">
       <NuxtLink v-for="(link, i) in links" :key="i" class="link" :to="link.to">
-        <VIcon :id="'icon' + i" :name="link.icon" :scale="link.scale" />
+        <ClientOnly>
+          <VIcon :id="'icon' + i" :name="link.icon" :scale="link.scale" />
+        </ClientOnly>
         {{ link.name }}
       </NuxtLink>
     </div>

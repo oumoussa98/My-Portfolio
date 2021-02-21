@@ -23,7 +23,9 @@
               target="_blank"
               class="github"
             >
-              <VIcon scale="1.5" name="bi-github" />
+              <ClientOnly>
+                <VIcon scale="1.5" name="bi-github" />
+              </ClientOnly>
             </a>
             <a
               v-if="project.codepen"
@@ -31,7 +33,9 @@
               target="_blank"
               class="codepen"
             >
-              <VIcon scale="1.5" name="si-codepen" />
+              <ClientOnly>
+                <VIcon scale="1.5" name="si-codepen" />
+              </ClientOnly>
             </a>
             <a
               v-if="project.netlify"
@@ -39,7 +43,9 @@
               target="_blank"
               class="netlify"
             >
-              <VIcon scale="1.5" name="si-netlify" color="#3398DB" />
+              <ClientOnly>
+                <VIcon scale="1.5" name="si-netlify" color="#3398DB" />
+              </ClientOnly>
               <span class="netlify__preview">Preview</span>
             </a>
           </div>
@@ -50,8 +56,10 @@
       <div v-if="projects.length < length" class="load-more-container">
         <span class="load-more-btn" @click="$fetch">
           Load more
-          <VIcon v-if="!loading" name="ri-loader-fill" />
-          <VIcon v-else name="ri-loader-fill" animation="spin" />
+          <ClientOnly>
+            <VIcon v-if="!loading" name="ri-loader-fill" />
+            <VIcon v-else name="ri-loader-fill" animation="spin" />
+          </ClientOnly>
         </span>
       </div>
     </div>
