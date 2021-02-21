@@ -186,9 +186,12 @@ export default {
       top: -10%;
       &__links {
         position: absolute;
-        top: -10%;
-        left: -5%;
-        margin: 0 0 0 40px;
+        width: 100%;
+        height: 100%;
+        top: -18%;
+        left: 0;
+        display: flex;
+        justify-content: center;
       }
       .github {
         cursor: pointer;
@@ -226,8 +229,11 @@ export default {
           color: white;
           border-radius: 6px;
           position: absolute;
-          bottom: 200%;
+          bottom: 106%;
           right: -80%;
+          @media screen and(max-width: 650px) {
+            right: -65%;
+          }
           &::after {
             content: '';
             position: absolute;
