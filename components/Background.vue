@@ -1,27 +1,19 @@
 <template>
   <div class="container">
     <div v-for="(icon, i) in icons" :key="i" class="circle-container">
-      <CLientOnly>
-        <VIcon id="tech-icon" :name="icon"></VIcon>
-      </CLientOnly>
+      <VIcon id="tech-icon" :name="icon"></VIcon>
     </div>
     <div class="circle-container">
-      <CLientOnly>
-        <VIcon id="tech-icon" color="#AEDDFF" name="si-vuetify"></VIcon>
-      </CLientOnly>
+      <VIcon id="tech-icon" color="#AEDDFF" name="si-vuetify"></VIcon>
     </div>
     <div class="circle-container">
-      <CLientOnly>
-        <VIcon id="tech-icon" color="#7811F7" name="si-bootstrap"></VIcon>
-      </CLientOnly>
+      <VIcon id="tech-icon" color="#7811F7" name="si-bootstrap"></VIcon>
     </div>
     <div class="circle-container">
-      <CLientOnly>
-        <VIcon
-          style="background: white; color: black; margin: 0 10px 0 12px"
-          name="si-express"
-        />
-      </CLientOnly>
+      <VIcon
+        style="background: white; color: black; margin: 0 10px 0 12px"
+        name="si-express"
+      />
     </div>
   </div>
 </template>

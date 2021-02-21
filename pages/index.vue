@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <section class="home__hero">
-      <Background />
+      <ClientOnly>
+        <Background />
+      </ClientOnly>
       <div>
         <div class="intro">
           <h1 class="hi">Hi there!</h1>
