@@ -13,13 +13,11 @@ exports.handler = async event => {
                   phone: ${body.phone} 
                   message: ${body.message}`
 
-  const res = await sendMail({
+  await sendMail({
     to: emailTO,
     text: text,
   })
 
   console.log('\x1b[32m', 'Task finished :)')
-
-  if (res) return successResponse(res)
-  else errorResponse('\x1b[31m', 'something went wrong :(')
+  return successResponse('Data sent successsfully :)')
 }
