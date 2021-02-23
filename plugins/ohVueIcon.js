@@ -37,6 +37,7 @@ import {
   ViFileTypeServerless,
   SiCodepen,
   RiLoaderFill,
+  OiMail,
 } from 'oh-vue-icons/icons'
 
 const icons = [
@@ -75,6 +76,7 @@ const icons = [
   ViFileTypeServerless,
   SiCodepen,
   RiLoaderFill,
+  OiMail,
 ]
 
 OhVueIcon.add(icons)
