@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="modal">
-      <div @click="hideModal" class="modal-overlay"></div>
+      <div class="modal-overlay" @click="hideModal"></div>
       <div class="modal-content">
-        <span @click="hideModal" class="close"></span>
+        <span class="close" @click="hideModal"></span>
         <slot />
       </div>
     </div>
