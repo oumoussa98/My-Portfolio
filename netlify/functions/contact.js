@@ -8,7 +8,7 @@ exports.handler = async event => {
 
   const emailTO = process.env.MAIL_TO
 
-  const text = `name: ${body.name} 
+  const text = `  name: ${body.name} 
                   email: ${body.email} 
                   phone: ${body.phone} 
                   message: ${body.message}`
