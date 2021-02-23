@@ -8,14 +8,14 @@ exports.handler = async event => {
 
   const emailTO = process.env.MAIL_TO
 
-  const text = `  name: ${body.name} 
-                  email: ${body.email} 
-                  phone: ${body.phone} 
-                  message: ${body.message}`
+  const text = `name: ${body.name} 
+                email: ${body.email} 
+                phone: ${body.phone} 
+                message: ${body.message}`
 
   await sendMail({
     to: emailTO,
-    text: text,
+    text,
   })
 
   console.log('\x1b[32m', 'Task finished :)')
