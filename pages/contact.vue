@@ -31,7 +31,9 @@
           v-model="formData.message"
         ></textarea>
       </div>
-
+      <div v-if="errorMessages" class="error">
+        {{ errorMessages }}
+      </div>
       <button :disabled="pending" type="submit">
         <span v-if="!pending">Send Message</span>
         <ClientOnly v-else>
@@ -57,6 +59,7 @@ export default {
   data: () => ({
     formData: {},
     errorMessage: false,
+    errorMessages: null,
     success: false,
     pending: false,
   }),
@@ -70,6 +73,7 @@ export default {
         this.errorMessages = 'Email and Message fields are required'
         return
       }
+      this.errorMessages = null
 
       this.pending = true
 
@@ -78,7 +82,6 @@ export default {
         body: JSON.stringify(this.formData),
       })
       if (res.status === 200) {
-        console.log(res)
         this.success = true
         this.displayModal()
       } else {
