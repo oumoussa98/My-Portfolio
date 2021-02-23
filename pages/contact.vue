@@ -202,7 +202,7 @@ export default {
     }
   }
   ::placeholder {
-    color: var(--color);
+    color: #ffffff8e;
   }
   button[type='submit'] {
     margin: 10px 0 0 0;
@@ -222,6 +222,13 @@ export default {
   button[type='submit']:hover {
     background: rgb(5, 119, 85);
     background: linear-gradient(to right, rgb(7, 150, 90), rgb(7, 121, 121));
+  }
+}
+body[data-light='true'] {
+  .contact {
+    ::placeholder {
+      color: #1d1d1dc2;
+    }
   }
 }
 </style>
