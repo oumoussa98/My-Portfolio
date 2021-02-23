@@ -34,6 +34,9 @@
 
       <button :disabled="pending" type="submit">
         <span v-if="!pending">Send Message</span>
+        <ClientOnly v-else>
+          <VIcon name="ri-loader-fill" animation="spin" />
+        </ClientOnly>
       </button>
     </form>
     <Modal>
@@ -54,7 +57,7 @@ export default {
   data: () => ({
     formData: {},
     errorMessage: false,
-    success: true,
+    success: false,
     pending: false,
   }),
   methods: {
@@ -63,18 +66,26 @@ export default {
       el.setAttribute('data-hide', 'false')
     },
     async handleSubmit() {
-      this.displayModal()
       if (!this.formData.email || !this.formData.message) {
         this.errorMessages = 'Email and Message fields are required'
         return
       }
 
       this.pending = true
-      const res = await this.$axios.post('/.netlify/functions/contact', {
-        ...this.formData,
+
+      const res = await fetch('/.netlify/functions/contact', {
+        method: 'POST',
+        body: JSON.stringify(this.formData),
       })
-      console.log(res)
-      this.success = true
+      if (res.status === 200) {
+        console.log(res)
+        this.success = true
+        this.displayModal()
+      } else {
+        this.errorMessage = true
+        this.displayModal()
+      }
+      this.pending = false
     },
   },
 }
@@ -157,6 +168,7 @@ textarea {
 button[type='submit'] {
   margin: 10px 0 0 0;
   padding: 12px 20px;
+  min-width: 120px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
