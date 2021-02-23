@@ -21,3 +21,16 @@ collections:
       - { label: 'Github link', name: 'github', widget: 'string' }
       - { label: 'Codepen link', name: 'codepen', widget: 'string' }
       - { label: 'Netlify link', name: 'netlify', widget: 'string' }
+
+  - name: 'about'
+    label: 'About me'
+    folder: 'content/about-me'
+    format: 'frontmatter'
+    create: false
+    editor:
+      preview: true
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Birth Date', name: 'birthDate', widget: 'string' }
+      - { label: 'History', name: 'history', widget: 'text' }
+      - { label: 'Extended History', name: 'extendedHistory', widget: 'text' }
