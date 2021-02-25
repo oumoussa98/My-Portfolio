@@ -3,6 +3,8 @@ backend:
   branch: main
   repo: oumoussa98/portfolio
 
+local_backend: true
+
 media_folder: static/images
 public_folder: /images
 
@@ -18,9 +20,24 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Screenshot', name: 'img', widget: 'image' }
-      - { label: 'Github link', name: 'github', widget: 'string' }
-      - { label: 'Codepen link', name: 'codepen', widget: 'string' }
-      - { label: 'Netlify link', name: 'netlify', widget: 'string' }
+      - {
+          label: 'Github link',
+          name: 'github',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Codepen link',
+          name: 'codepen',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Netlify link',
+          name: 'netlify',
+          widget: 'string',
+          required: false,
+        }
 
   - name: 'about'
     label: 'About me'
@@ -33,4 +50,65 @@ collections:
       - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Birth Date', name: 'birthDate', widget: 'string' }
       - { label: 'History', name: 'history', widget: 'text' }
-      - { label: 'Extended History', name: 'extendedHistory', widget: 'text' }
+      - {
+          label: 'Extended History',
+          name: 'extendedHistory',
+          widget: 'text',
+          required: false,
+        }
+  - name: 'skills'
+    label: 'Skills'
+    identifier_field: 'name'
+    editor:
+      preview: false
+    create: true
+    files:
+      - file: 'content/skills/languages/languages.json'
+        name: 'languages'
+        label: 'Languages'
+        fields:
+          - name: 'languages'
+            label: 'Languages'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Name',
+                  name: 'name',
+                  widget: 'string',
+                  required: false,
+                }
+              - { label: 'Icons', name: 'icons', widget: 'list' }
+              - { label: 'Icon Scale', name: 'iconScale', widget: 'string' }
+              - { label: 'Description', name: 'description', widget: 'text' }
+      - file: 'content/skills/frontend/frontend.json'
+        name: 'frontend'
+        label: 'Frontend'
+        fields:
+          - name: 'frontend'
+            label: 'Frontend'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Name',
+                  name: 'name',
+                  widget: 'string',
+                  required: false,
+                }
+              - { label: 'Icons', name: 'icons', widget: 'list' }
+              - { label: 'Description', name: 'description', widget: 'text' }
+      - file: 'content/skills/backend/backend.json'
+        name: 'backend'
+        label: 'backend'
+        fields:
+          - name: 'backend'
+            label: 'Backend'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Name',
+                  name: 'name',
+                  widget: 'string',
+                  required: false,
+                }
+              - { label: 'Icon', name: 'icon', widget: 'string' }
+              - { label: 'Description', name: 'description', widget: 'text' }
