@@ -1,0 +1,23 @@
+{
+  "title": "backend",
+  "languages": [
+    {
+      "name": "PHP",
+      "icons": ["vi-file-type-php3"],
+      "iconScale": "4",
+      "description": "The first one I started with, I built some websites with it, Also I tried its laravel framework which I really liked even though I didn't like PHP syntax"
+    },
+    {
+      "name": "C and C++",
+      "icons": ["vi-file-type-c", "vi-file-type-cpp3"],
+      "iconScale": "3",
+      "description": "I started C++ at university first, but I learned more about it after, I also learned some C as well since C++ is a superset of C, whenever I get bored or not feeling good you'll find me playing with these languages"
+    },
+    {
+      "name": "JS",
+      "icons": ["vi-file-type-js"],
+      "iconScale": "4",
+      "description": "Currently, trying to deep dive into it and get more comfortable with it and its ecosystem I like the idea of one codebase for multiple platforms it saves time and money and it fits nicely for small to medium projects"
+    }
+  ]
+}

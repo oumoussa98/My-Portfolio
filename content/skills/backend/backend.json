@@ -1,0 +1,35 @@
+{
+  "title": "backend",
+  "backend": [
+    {
+      "name": "Nodejs",
+      "icon": "vi-file-type-node",
+      "description": "Back-end JavaScript runtime environment",
+      "href": "https://nodejs.org/"
+    },
+    {
+      "name": "Expressjs",
+      "icon": "si-express",
+      "description": "Fast, unopinionated, minimalist web framework for Node.js",
+      "href": "https://expressjs.com/"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "vi-file-type-mongo",
+      "description": "General purpose, document-based, distributed database",
+      "href": "https://www.mongodb.com/"
+    },
+    {
+      "name": "MySql",
+      "icon": "vi-file-type-mysql",
+      "description": "Relational database management system",
+      "href": "https://www.mysql.com/"
+    },
+    {
+      "name": "Serverless",
+      "icon": "vi-file-type-serverless",
+      "description": "serverless with <a href='https://www.netlify.com/products/functions/' target='_blank' > netlify functions</a > it's a method of providing backend services on an as-used basis",
+      "href": "https://www.serverless.com/"
+    }
+  ]
+}

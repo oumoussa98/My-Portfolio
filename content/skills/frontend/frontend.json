@@ -1,0 +1,42 @@
+{
+  "title": "backend",
+  "frontend": [
+    {
+      "name": "",
+      "icons": ["vi-file-type-html", "vi-file-type-css", "vi-file-type-scss"],
+      "description": "HTML, CSS and <a href='https://sass-lang.com/' target='_blank'>SASS</a>"
+    },
+    {
+      "name": "Vue.js",
+      "icons": ["vi-file-type-vue"],
+      "description": "The Progressive JavaScript Framework",
+      "href": "https://vuejs.org/"
+    },
+    {
+      "name": "Vuetify.js",
+      "icons": ["si-vuetify"],
+      "iconColor": "#7BC6FF",
+      "description": "Vue UI Library",
+      "href": "https://vuetifyjs.com/"
+    },
+    {
+      "name": "Bootstrap",
+      "icons": ["si-bootstrap"],
+      "iconColor": "#7811F7",
+      "description": "The most popular HTML, CSS, and JS library",
+      "href": "https://getbootstrap.com/"
+    },
+    {
+      "name": "Gridsome",
+      "icons": ["vi-file-type-gridsome"],
+      "description": "A Jamstack framework for Vue.js",
+      "href": "https://gridsome.org/"
+    },
+    {
+      "name": "Nuxtjs",
+      "icons": ["vi-file-type-nuxt"],
+      "description": "The Intuitive Vue Framework",
+      "href": "https://nuxtjs.org/"
+    }
+  ]
+}

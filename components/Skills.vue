@@ -4,7 +4,7 @@
     <div class="skills__desc">
       <h2 class="title">Programming languages</h2>
       <div class="programing-languages">
-        <div v-for="(lang, i) in data.languages" :key="lang.name" class="lang">
+        <div v-for="(lang, i) in languages" :key="lang.name" class="lang">
           <div :class="'lang__title lang__title' + (i + 1)">
             <ClientOnly>
               <VIcon
@@ -28,7 +28,7 @@
           <div class="fullstack__container">
             <div class="fullstack__content">
               <div
-                v-for="tech in data.frontend"
+                v-for="tech in frontend"
                 :key="tech.name"
                 class="frontend__tech fullstack__content__tech"
               >
@@ -56,7 +56,7 @@
           <div class="fullstack__container">
             <div class="fullstack__content">
               <div
-                v-for="tech in data.backend"
+                v-for="tech in backend"
                 :key="tech.name"
                 class="frontend__tech fullstack__content__tech"
               >
@@ -80,12 +80,18 @@
 <script>
 export default {
   data: () => ({
-    data: {},
+    languages: [],
+    frontend: [],
+    backend: [],
   }),
   async fetch() {
-    const data = await this.$content('skills').fetch()
-    this.data = data[0]
-    console.log(data)
+    const frontend = await this.$content('skills/frontend').fetch()
+    const backend = await this.$content('skills/backend').fetch()
+    const languages = await this.$content('skills/languages').fetch()
+
+    this.languages = languages[0].languages
+    this.frontend = frontend[0].frontend
+    this.backend = backend[0].backend
   },
 }
 </script>
