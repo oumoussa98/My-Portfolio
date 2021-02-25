@@ -43,7 +43,7 @@
     </form>
     <Modal>
       <div v-if="errorMessage" class="error">
-        Something went wrong ☹️ please try again
+        Oops ☹️ Something went wrong please try again
       </div>
       <div v-if="success" class="success">
         <h2>Message Sent Successfully ✅</h2>
@@ -52,19 +52,20 @@
       </div>
     </Modal>
     <div class="others">
-      <ClientOnly>
-        <VIcon id="icon" name="oi-mail" scale="1.5" />
-      </ClientOnly>
       <a href="mailto:abdelwahd.oumouss@gmail.com" target="_blank">
+        <ClientOnly>
+          <VIcon id="icon" name="oi-mail" scale="1.5" />
+        </ClientOnly>
         abdelwahd.oumouss@gmail.com
       </a>
-      <ClientOnly>
-        <VIcon id="icon" name="bi-linkedin" scale="1.5" />
-      </ClientOnly>
+
       <a
         href="https://www.linkedin.com/in/abdelouahed-oumoussa-168838206/"
         target="_blank"
       >
+        <ClientOnly>
+          <VIcon id="icon" name="bi-linkedin" scale="1.5" />
+        </ClientOnly>
         Linkedin
       </a>
     </div>
@@ -85,6 +86,15 @@ export default {
       const el = document.querySelector('.modal')
       el.setAttribute('data-hide', 'false')
     },
+    submited() {
+      Object.keys(this.formData).forEach(p => (this.formData[p] = ''))
+      this.success = true
+      this.displayModal()
+    },
+    displayError() {
+      this.errorMessage = true
+      this.displayModal()
+    },
     async handleSubmit() {
       if (
         !this.formData.email ||
@@ -96,20 +106,14 @@ export default {
         return
       }
       this.errorMessages = null
-
       this.pending = true
 
       const res = await fetch('/.netlify/functions/contact', {
         method: 'POST',
         body: JSON.stringify(this.formData),
       })
-      if (res.status === 200) {
-        this.success = true
-        this.displayModal()
-      } else {
-        this.errorMessage = true
-        this.displayModal()
-      }
+      if (res.status === 200) this.submited()
+      else this.displayError()
       this.pending = false
     },
   },
@@ -160,6 +164,8 @@ export default {
       color: inherit;
       text-decoration: underline;
       margin: 0 20px 0 0;
+      display: inline-flex;
+      align-items: center;
     }
     #icon {
       margin: 0 5px 0 0;
