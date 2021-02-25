@@ -4,8 +4,8 @@
     <div class="skills__desc">
       <h2 class="title">Programming languages</h2>
       <div class="programing-languages">
-        <div v-for="(lang, i) in languages" :key="lang.name" class="lang">
-          <div :class="'lang__title lang__title' + (i + 1)">
+        <div v-for="(lang, index) in languages" :key="lang.name" class="lang">
+          <div :class="'lang__title lang__title' + (index + 1)">
             <ClientOnly>
               <VIcon
                 v-for="(icon, i) in lang.icons"
