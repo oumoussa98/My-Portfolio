@@ -48,7 +48,7 @@ export default {
 <style lang="scss">
 .container {
   width: 100%;
-  height: 120%;
+  height: 130%;
   top: -20%;
   left: 0;
   position: absolute;
@@ -84,13 +84,13 @@ export default {
 
   @for $i from 1 through $particleNum {
     &:nth-child(#{$i}) {
-      $startPositionY: random(10) + 150;
+      $startPositionY: random($i * 5) + 150;
       $framesName: 'move-frames-' + $i;
-      $moveDuration: 30000 + random(9000) + ms;
+      $moveDuration: 30000 + random($i * 1000) + ms;
 
       animation-name: #{$framesName};
       animation-duration: $moveDuration;
-      animation-delay: random(40000) + ms;
+      animation-delay: random($i * 2100) + ms;
 
       @keyframes #{$framesName} {
         from {
