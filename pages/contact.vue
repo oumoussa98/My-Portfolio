@@ -81,6 +81,9 @@ export default {
     success: false,
     pending: false,
   }),
+  head: {
+    title: 'Oumoussa | Contact Page',
+  },
   methods: {
     displayModal() {
       const el = document.querySelector('.modal')

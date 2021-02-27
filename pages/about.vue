@@ -22,6 +22,9 @@ export default {
   async fetch() {
     this.data = (await this.$content('about-me').fetch())[0]
   },
+  head: {
+    title: 'Oumoussa | About me',
+  },
 }
 </script>
 
