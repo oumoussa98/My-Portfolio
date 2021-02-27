@@ -16,7 +16,9 @@
           />
         </ClientOnly>
         <h1 class="name">{{ content.secondH1 }}</h1>
-        <p class="bio" v-html="content.bio"></p>
+        <ClientOnly>
+          <p class="bio" v-html="content.bio"></p>
+        </ClientOnly>
       </div>
       <!-- buttons section -->
       <div class="actions">
