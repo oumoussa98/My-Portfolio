@@ -45,7 +45,7 @@ collections:
     format: 'frontmatter'
     create: false
     editor:
-      preview: true
+      preview: false
     fields:
       - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Birth Date', name: 'birthDate', widget: 'string' }
@@ -56,6 +56,17 @@ collections:
           widget: 'text',
           required: false,
         }
+  - name: 'hero'
+    label: 'Hero section'
+    folder: 'content/hero-section'
+    format: 'frontmatter'
+    create: false
+    editor:
+      preview: false
+    fields:
+      - { label: 'First header', name: 'h1', widget: 'string', required: false }
+      - { label: 'Second header', name: 'secondH1', widget: 'string' }
+      - { label: 'Bio', name: 'bio', widget: 'text' }
   - name: 'skills'
     label: 'Skills'
     identifier_field: 'name'
