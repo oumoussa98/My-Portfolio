@@ -7,8 +7,8 @@
       <p class="about__history" v-html="data.history"></p>
     </div>
     <div class="about__image">
-      <a href="images/ourika.jpg" target="_blank">
-        <img class="image" src="images/ourika.jpg" alt="my village picture" />
+      <a href="/images/ourika.jpg" target="_blank">
+        <img class="image" src="/images/ourika.jpg" alt="my village picture" />
       </a>
     </div>
   </div>
