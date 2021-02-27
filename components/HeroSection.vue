@@ -5,8 +5,8 @@
     </ClientOnly>
     <div>
       <div class="intro">
-        <h1 v-if="content.h1" class="hi">{{ content.h1 }}</h1>
-        <ClientOnly v-if="content.h1">
+        <h1 class="hi">Hi there!</h1>
+        <ClientOnly>
           <VIcon
             scale="3"
             name="la-handshake"
@@ -15,10 +15,27 @@
             hover
           />
         </ClientOnly>
-        <h1 class="name">{{ content.secondH1 }}</h1>
-        <ClientOnly>
-          <p class="bio" v-html="content.bio"></p>
-        </ClientOnly>
+        <h1 class="name">I'm Abdelouahed Oumoussa</h1>
+        <p class="bio">
+          A junior self-taught full-stack javascript developer from morocco, My
+          journey started from 2020. Coding is a passion first before it becomes
+          a profession. I always enjoy building and developing web apps. A list
+          of all my side projects could be found over
+          <a
+            class="github-link"
+            href="https://github.com/oumoussa98/My-projects-list"
+            target="_blank"
+          >
+            here
+            <ClientOnly>
+              <VIcon
+                class="github-link__icon"
+                scale="1.2"
+                name="oi-link-external"
+              />
+            </ClientOnly>
+          </a>
+        </p>
       </div>
       <!-- buttons section -->
       <div class="actions">
@@ -37,17 +54,6 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  data: () => ({
-    content: {},
-  }),
-  async fetch() {
-    this.content = (await this.$content('hero-section').fetch())[0]
-  },
-}
-</script>
 
 <style lang="scss">
 .hero {
