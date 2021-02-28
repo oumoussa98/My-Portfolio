@@ -43,6 +43,7 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
 
   loadingIndicator: {
@@ -63,4 +64,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  sitemap: {
+    hostname: 'https://oumoussa.tech',
+    gzip: true,
+    exclude: ['/admin', '/admin/**'],
+    routes: ['/about', '/contact', '/blog'],
+  },
 }
