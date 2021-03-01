@@ -28,7 +28,7 @@
     {
       "name": "Serverless",
       "icon": "vi-file-type-serverless",
-      "description": "serverless with <a href='https://www.netlify.com/products/functions/' target='_blank' > netlify functions</a > it's a method of providing backend services on an as-used basis",
+      "description": "serverless with <a href='https://www.netlify.com/products/functions/' target='_blank' rel='noopener'> netlify functions</a > it's a method of providing backend services on an as-used basis",
       "href": "https://www.serverless.com/"
     }
   ]

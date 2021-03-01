@@ -4,7 +4,7 @@
     {
       "name": "",
       "icons": ["vi-file-type-html", "vi-file-type-css", "vi-file-type-scss"],
-      "description": "HTML, CSS and <a href='https://sass-lang.com/' target='_blank'>SASS</a>"
+      "description": "HTML, CSS and <a href='https://sass-lang.com/' target='_blank ' rel='noopener'>SASS</a>"
     },
     {
       "name": "Vue.js",
