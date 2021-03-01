@@ -25,6 +25,7 @@
             class="github-link"
             href="https://github.com/oumoussa98/My-projects-list"
             target="_blank"
+            rel="noopener"
           >
             here
             <ClientOnly>
@@ -40,7 +41,12 @@
       <!-- buttons section -->
       <div class="actions">
         <NuxtLink class="first" to="/contact">Get in touch</NuxtLink>
-        <NuxtLink class="second" to="/resume.pdf" target="_blank">
+        <NuxtLink
+          class="second"
+          to="/resume.pdf"
+          target="_blank"
+          rel="noopener"
+        >
           Download my resume
           <ClientOnly>
             <VIcon scale="0.9" name="oi-link-external" />

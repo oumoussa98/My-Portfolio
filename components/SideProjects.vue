@@ -21,6 +21,7 @@
               v-if="project.github"
               :href="project.github"
               target="_blank"
+              rel="noopener"
               class="github"
             >
               <ClientOnly>
@@ -31,6 +32,7 @@
               v-if="project.codepen"
               :href="project.codepen"
               target="_blank"
+              rel="noopener"
               class="codepen"
             >
               <ClientOnly>
@@ -41,6 +43,7 @@
               v-if="project.netlify"
               :href="project.netlify"
               target="_blank"
+              rel="noopener"
               class="netlify"
             >
               <ClientOnly>

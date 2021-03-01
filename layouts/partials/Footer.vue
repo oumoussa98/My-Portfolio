@@ -9,6 +9,7 @@
             :key="i"
             :href="social.href"
             target="_blank"
+            rel="noopener"
             class="social-link"
           >
             <ClientOnly>
@@ -32,6 +33,7 @@
             <a
               href="https://github.com/oumoussa98/portfolio"
               target="_blank"
+              rel="noopener"
               class="social-link"
             >
               <ClientOnly>
@@ -44,6 +46,7 @@
             <a
               href="https://www.netlify.com"
               target="_blank"
+              rel="noopener"
               class="social-link"
             >
               <ClientOnly>

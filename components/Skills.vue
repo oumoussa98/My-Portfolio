@@ -32,7 +32,12 @@
                 :key="tech.name"
                 class="frontend__tech fullstack__content__tech"
               >
-                <a :href="tech.href" target="_blank">
+                <a
+                  v-if="tech.href"
+                  :href="tech.href"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <ClientOnly>
                     <VIcon
                       v-for="icon in tech.icons"
@@ -46,6 +51,20 @@
                     {{ tech.name }}
                   </span>
                 </a>
+                <span v-else>
+                  <ClientOnly>
+                    <VIcon
+                      v-for="icon in tech.icons"
+                      :key="icon"
+                      scale="1.8"
+                      :name="icon"
+                      :color="tech.iconColor"
+                    />
+                  </ClientOnly>
+                  <span class="fullstack__content__tech__name">
+                    {{ tech.name }}
+                  </span>
+                </span>
                 <span v-html="tech.description"></span>
               </div>
             </div>
@@ -60,7 +79,7 @@
                 :key="tech.name"
                 class="frontend__tech fullstack__content__tech"
               >
-                <a :href="tech.href" target="_blank">
+                <a :href="tech.href" target="_blank" rel="noopener">
                   <ClientOnly>
                     <VIcon scale="2" :name="tech.icon" />
                   </ClientOnly>

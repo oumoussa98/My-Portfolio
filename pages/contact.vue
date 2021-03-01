@@ -52,7 +52,11 @@
       </div>
     </Modal>
     <div class="others">
-      <a href="mailto:abdelwahd.oumouss@gmail.com" target="_blank">
+      <a
+        href="mailto:abdelwahd.oumouss@gmail.com"
+        target="_blank"
+        rel="noopener"
+      >
         <ClientOnly>
           <VIcon id="icon" name="oi-mail" scale="1.5" />
         </ClientOnly>
@@ -62,6 +66,7 @@
       <a
         href="https://www.linkedin.com/in/abdelouahed-oumoussa-168838206/"
         target="_blank"
+        rel="noopener"
       >
         <ClientOnly>
           <VIcon id="icon" name="bi-linkedin" scale="1.5" />
