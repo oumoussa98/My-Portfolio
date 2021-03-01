@@ -18,7 +18,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.9.0",
     "nodemailer": "^6.5.0",
-    "nuxt": "^2.15.1",
+    "nuxt": "^2.15.2",
     "oh-vue-icons": "^0.1.10"
   },
   "devDependencies": {
