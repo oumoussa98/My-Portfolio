@@ -41,7 +41,6 @@ export default {
       lang: 'en',
       useWebmanifestExtension: false,
     },
-    icon: false,
   },
 
   content: {},
