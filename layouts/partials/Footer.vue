@@ -84,8 +84,7 @@ export default {
 .footer {
   min-height: 300px;
   padding: 40px 50px 0px 50px;
-  margin: 0 60px;
-  border-radius: 50px 50px 0 0;
+  // border-radius: 50px 50px 0 0;
   background: var(--bg-secondary);
   .section-1 {
     display: flex;
@@ -126,8 +125,8 @@ export default {
   }
   .section-2 {
     text-align: center;
-    border-top: 1px solid var(--color);
-    padding: 6px 10px 1px 10px;
+    border-top: 1px solid rgb(58, 72, 87);
+    padding: 10px 10px 1px 10px;
     margin: 20px auto 0 auto;
     strong {
       font-weight: bold;
