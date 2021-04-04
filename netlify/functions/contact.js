@@ -18,6 +18,6 @@ exports.handler = async event => {
     text,
   })
 
-  console.log('\x1b[32m', 'Task finished :)')
+  console.log('\x1B[32m', 'Task finished :)')
   return successResponse('Data sent successsfully :)')
 }

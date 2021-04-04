@@ -86,6 +86,16 @@ export default {
     success: false,
     pending: false,
   }),
+  head: {
+    title: 'Oumoussa | Contact me',
+    meta: [
+      {
+        name: 'description',
+        content:
+          'For any business inquiries or wants to get in touch feel free to contact me',
+      },
+    ],
+  },
   methods: {
     displayModal() {
       const el = document.querySelector('.modal')
@@ -121,15 +131,6 @@ export default {
       else this.displayError()
       this.pending = false
     },
-  },
-  head: {
-    title: 'Oumoussa | Contact me',
-    meta: [
-      {
-        name: 'description',
-        content: 'For any business inquiries or wants to get in touch feel free to contact me',
-      },
-    ],
   },
 }
 </script>

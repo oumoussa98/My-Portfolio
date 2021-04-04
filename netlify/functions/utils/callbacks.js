@@ -1,6 +1,6 @@
 const errorResponse = err => {
-  console.log('\x1b[31m', '============= Error response ===============')
-  if (!!err.status) {
+  console.log('\x1B[31m', '============= Error response ===============')
+  if (!err.status) {
     return {
       statusCode: err.status,
       body: JSON.stringify(err),
@@ -13,8 +13,8 @@ const errorResponse = err => {
 }
 
 const successResponse = res => {
-  console.log('\x1b[32m', '============= Success response ===============')
-  if (!!res.status) {
+  console.log('\x1B[32m', '============= Success response ===============')
+  if (!res.status) {
     return {
       statusCode: res.status,
       body: JSON.stringify(res),

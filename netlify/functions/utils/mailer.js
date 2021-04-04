@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   },
 })
 const sendMail = async mailOptions => {
-  console.log('\x1b[35m', 'Sending email...')
+  console.log('\x1B[35m', 'Sending email...')
   await transporter
     .sendMail({
       from: '<oumoussa> OUMOUSSA',
@@ -17,7 +17,7 @@ const sendMail = async mailOptions => {
       subject: 'Contact form <oumoussa.tech>',
       text: mailOptions.text,
     })
-    .then(res => console.log('\x1b[32m', 'Email sent successfully :)'))
+    .then(res => console.log('\x1B[32m', 'Email sent successfully :)'))
 }
 module.exports = {
   sendMail,
