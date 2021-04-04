@@ -15,54 +15,37 @@ export default {
           'Abdelouahed oumoussa a self-taught javascript developer from morocco, interested in jamstack and new web technologies',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/png', href: '/favicon.ico' }],
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/style/index.scss'],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: '~/plugins/ohVueIcon.js', mode: 'client' }],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
+    '@nuxtjs/pwa',
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-analytics',
   ],
   googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
+    id: process.env.GOOGLE_ANALYTICS_ID,
   },
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
-    '@nuxtjs/sitemap',
-  ],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap'],
 
-  loadingIndicator: {
-    name: 'folding-cube',
-    color: '#ffffff',
-    background: '#2f495e',
-  },
-
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
+      name: 'Oumoussa',
       lang: 'en',
+      useWebmanifestExtension: false,
     },
+    icon: false,
   },
 
-  // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
   sitemap: {
