@@ -8,7 +8,7 @@
 <script>
 export default {
   head: {
-    title: 'Oumoussa | Home Page',
+    title: 'Oumoussa | Web Developer',
   },
 }
 </script>

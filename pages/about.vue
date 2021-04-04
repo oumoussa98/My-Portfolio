@@ -24,6 +24,12 @@ export default {
   },
   head: {
     title: 'Oumoussa | About me',
+    meta: [
+      {
+        name: 'description',
+        content: 'Brief history about me',
+      },
+    ],
   },
 }
 </script>
