@@ -2,15 +2,17 @@
   <div class="header">
     <!--              computer vesion                 -->
     <!------- brand area ------>
-    <NuxtLink class="brand" :to="brand.to">
-      <img
-        class="brand-img"
-        src="~/assets/images/logo.svg"
-        alt="logo"
-        width="50"
-      />
-      <span>{{ brand.name }}</span>
-    </NuxtLink>
+    <div class="brand">
+      <NuxtLink :to="brand.to">
+        <img
+          class="brand-img"
+          src="~/assets/images/logo.svg"
+          alt="logo"
+          width="50"
+        />
+        <span>{{ brand.name }}</span>
+      </NuxtLink>
+    </div>
     <!-------- Links area ------>
     <div class="links">
       <NuxtLink v-for="(link, i) in links" :key="i" class="link" :to="link.to">
@@ -85,9 +87,11 @@ export default {
   .brand {
     min-width: 34%;
     margin-left: 10px;
-    display: flex;
-    align-items: center;
     font-size: 20px;
+    a {
+      display: inline-flex;
+      align-items: center;
+    }
   }
   .brand span {
     color: var(--color);
