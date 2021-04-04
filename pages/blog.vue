@@ -1,6 +1,6 @@
 <template>
   <div class="blog">
-    <h1>Working on it</h1>
+    <Post :post="{}" />
   </div>
 </template>
 
@@ -19,4 +19,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss">
+.blog {
+  padding: 2rem 4rem;
+}
+</style>
