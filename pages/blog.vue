@@ -21,6 +21,7 @@ export default {
 
 <style lang="scss">
 .blog {
+  margin: 30px 0;
   padding: 2rem 4rem;
 }
 </style>

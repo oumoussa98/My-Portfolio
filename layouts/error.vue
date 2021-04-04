@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .page404 {
   padding: 1rem;
   margin: 50px 0;

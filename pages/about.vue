@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .about {
   max-width: 1200px;
   // background: rgba(25, 51, 70, 0.2);

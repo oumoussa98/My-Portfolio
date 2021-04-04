@@ -61,7 +61,7 @@
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hero {
   animation: smoothDisplay 0.8s linear;
   min-height: 80vh;

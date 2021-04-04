@@ -135,7 +135,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .contact {
   margin: 20px auto 0 auto;
   max-width: 800px;
