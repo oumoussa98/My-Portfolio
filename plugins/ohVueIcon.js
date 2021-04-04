@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import OhVueIcon from 'oh-vue-icons/components/Icon'
+import OhVueIcon from 'oh-vue-icons'
 
 import {
   FaHome,
@@ -79,6 +79,6 @@ const icons = [
   OiMail,
 ]
 
-OhVueIcon.add(icons)
+OhVueIcon.add(...icons)
 
 Vue.component('VIcon', OhVueIcon)
