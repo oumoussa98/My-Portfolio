@@ -65,8 +65,11 @@
 .hero {
   animation: smoothDisplay 0.8s linear;
   min-height: 80vh;
-  justify-content: center;
-  padding: 0 20px;
+  justify-content: space-between;
+  @media screen and (max-width: 1200px) {
+    justify-content: center;
+  }
+  padding: 0 3rem 0 2.5rem;
   position: relative;
   display: flex;
   flex-wrap: wrap;
