@@ -74,6 +74,9 @@ export default {
 <style lang="scss">
 /* header */
 .header {
+  .nuxt-link-exact-active {
+    color: #14d89d !important;
+  }
   width: 100%;
   display: flex;
   align-items: center;
