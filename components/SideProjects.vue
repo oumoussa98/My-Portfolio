@@ -47,7 +47,7 @@
               class="netlify"
             >
               <ClientOnly>
-                <VIcon scale="1.5" name="si-netlify" color="#3398DB" />
+                <VIcon scale="1.6" name="oi-link-external" />
               </ClientOnly>
               <span class="netlify__preview">Preview</span>
             </a>
