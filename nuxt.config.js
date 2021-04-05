@@ -1,8 +1,10 @@
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  generate: {
+    fallback: true,
+  },
+
   head: {
     title: 'oumoussa',
     meta: [
@@ -42,10 +44,6 @@ export default {
       useWebmanifestExtension: false,
     },
   },
-
-  content: {},
-
-  build: {},
 
   sitemap: {
     hostname: 'https://oumoussa.tech',
