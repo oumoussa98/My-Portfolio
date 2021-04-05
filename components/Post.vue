@@ -1,11 +1,5 @@
 <template>
   <div class="post">
-    <div class="image">
-      <img
-        src="/images/nuxtjs.jpg"
-        alt="Picture with Nuxtjs text and its logo"
-      />
-    </div>
     <div class="content">
       <h2>Create a content driven portfolio with nuxjs</h2>
       <p class="soon">soon</p>
@@ -24,6 +18,12 @@
         <p>July 17, 2020 - 5 min read</p>
       </div>
     </div>
+    <div class="image">
+      <img
+        src="/images/nuxtjs.jpg"
+        alt="Picture with Nuxtjs text and its logo"
+      />
+    </div>
   </div>
 </template>
 
@@ -37,74 +37,83 @@ export default {
 
 <style lang="scss" scoped>
 .post {
-  width: 80%;
+  max-width: 960px;
   margin: 0 auto;
-  height: 300px;
-  position: relative;
+  display: flex;
   transition: all 0.25s;
   background: var(--bg-secondary);
   border-radius: 5px;
-  box-shadow: 1px 4px 6px rgba(#000000, 0.3);
-  overflow-y: hidden;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 20%), 0 1px 2px rgb(0 0 0 / 30%);
   cursor: pointer;
   &:hover {
     transform: translateY(-2%);
     box-shadow: 1px 4px 10px rgba(#000000, 0.3);
   }
-}
-.image {
-  position: absolute;
-  width: 36%;
-  height: 92%;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 1%;
-  border-radius: 10px;
-  img {
-    width: 100%;
-    height: 100%;
+  .image {
+    width: 36%;
+    height: 300px;
     border-radius: 10px;
-    object-fit: cover;
-    object-position: center center;
+    padding: 0.5rem;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center center;
+    }
   }
-}
-.content {
-  position: absolute;
-  border-radius: 10px;
-  width: 64%;
-  height: 100%;
-  padding: 1rem 2rem;
-  left: 0;
-  top: 0;
+  .content {
+    position: relative;
+    border-radius: 10px;
+    width: 64%;
+    padding: 1em 2em 0em 2em;
 
-  h2 {
-    font-size: 1.8rem;
-    font-weight: 300;
-    line-height: 1.5;
-    margin: 0 0 20px 0;
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 1.5;
+      margin: 0 0 20px 0;
+    }
+    p {
+      font-weight: 500;
+      line-height: 1.5;
+      margin: 0 0 20px 0;
+    }
+    .soon {
+      top: 13px;
+      left: -2px;
+      transform: rotate(-45deg);
+      padding: 0px 10px;
+      border-radius: 15px;
+      background: #06da88;
+      position: absolute;
+      color: rgb(255, 255, 255);
+    }
+    .tags {
+      padding: 0.5em 0;
+    }
+    .date {
+      position: absolute;
+      bottom: 0px;
+      font-weight: 300;
+    }
   }
-  p {
-    font-weight: 500;
-    line-height: 1.5;
-    margin: 0 0 20px 0;
-  }
-  .soon {
-    top: 13px;
-    left: -2px;
-    transform: rotate(-45deg);
-    padding: 0px 10px;
-    border-radius: 15px;
-    background: #06da88;
-    position: absolute;
-    color: rgb(255, 255, 255);
-  }
-  .tags {
-    padding: 1em 0;
-  }
-  .date {
-    position: absolute;
-    bottom: 0;
-    font-weight: 300;
+  @media screen and (max-width: 1000px) {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    max-width: 600px;
+    padding: 0 0 1em 0;
+    .content {
+      width: 100%;
+      .date {
+        position: static;
+        margin-top: 1em;
+      }
+    }
+    .image {
+      width: 100%;
+      height: 380px;
+    }
   }
 }
 </style>

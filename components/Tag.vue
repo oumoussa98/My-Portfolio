@@ -15,6 +15,7 @@ export default {
   padding: 0.5em 1em;
   border-radius: 15px;
   margin: 0 10px 0 0;
+  color: white;
 }
 .tag:nth-of-type(1n + 1) {
   background: rgb(186, 8, 8);
