@@ -44,7 +44,7 @@ export default {
   &__info {
     max-width: 600px;
     text-align: center;
-    margin: auto 0 20px auto;
+    margin: 0 auto 0 auto;
   }
   &__image {
     position: relative;
