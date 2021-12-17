@@ -116,7 +116,6 @@ export default {
 </script>
 <style lang="scss">
 .skills {
-  min-height: 100vh;
   padding: 100px 20px 200px 20px;
   clip-path: polygon(100% 0%, 0% 10%, 0% 100%, 100% 90%);
   background: var(--bg-secondary);

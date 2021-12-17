@@ -100,7 +100,6 @@ export default {
 
 <style lang="scss">
 .side-projects {
-  min-height: 100vh;
   padding: 10px 50px;
   .display-3 {
     text-align: center;

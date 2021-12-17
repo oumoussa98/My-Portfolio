@@ -6,11 +6,6 @@
       <p class="about__birth">Born in {{ data.birthDate }}</p>
       <p class="about__history" v-html="data.history"></p>
     </div>
-    <div class="about__image">
-      <a href="/images/ourika.jpg" target="_blank" rel="noopener">
-        <img class="image" src="/images/ourika.jpg" alt="my village picture" />
-      </a>
-    </div>
   </div>
 </template>
 
@@ -48,7 +43,8 @@ export default {
   transition: background 0.6s;
   &__info {
     max-width: 600px;
-    margin: 0 0 20px 0;
+    text-align: center;
+    margin: auto 0 20px auto;
   }
   &__image {
     position: relative;

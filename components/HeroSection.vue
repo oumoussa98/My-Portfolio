@@ -64,7 +64,7 @@
 <style lang="scss" scoped>
 .hero {
   animation: smoothDisplay 0.8s linear;
-  min-height: 80vh;
+  min-height: 70vh;
   justify-content: space-between;
   @media screen and (max-width: 1200px) {
     justify-content: center;
@@ -73,6 +73,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 120px;
 
   .intro {
     padding: 10px 15px 10px 0;
