@@ -73,11 +73,11 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 120px;
+  padding-top: 10vh;
 
   .intro {
     padding: 10px 15px 10px 0;
-    margin: 80px 0 0 0;
+    margin: 50px 0 0 0;
     max-width: 790px;
     .hi {
       font-size: 45px;
