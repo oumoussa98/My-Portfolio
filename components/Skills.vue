@@ -184,7 +184,7 @@ export default {
       margin: 0 0 20px 0;
       padding: 10px 20px 20px 20px;
       border-radius: 20px;
-      flex: 1 1 410px;
+      text-align: center;
       flex: 0 1 410px;
       background: rgba(0, 0, 0, 0.1);
 
