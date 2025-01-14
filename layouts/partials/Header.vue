@@ -42,7 +42,6 @@ export default {
     // links --------------------
     links: [
       { name: 'Home', to: '/', icon: 'fa-home' },
-      { name: 'About', to: '/about', icon: 'bi-info-circle-fill' },
       {
         name: 'Contact',
         to: '/contact',

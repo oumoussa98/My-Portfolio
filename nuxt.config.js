@@ -49,6 +49,6 @@ export default {
     hostname: 'https://oumoussa.tech',
     gzip: true,
     exclude: ['/admin', '/admin/**'],
-    routes: ['/about', '/contact', '/blog'],
+    routes: ['/contact', '/blog'],
   },
 }

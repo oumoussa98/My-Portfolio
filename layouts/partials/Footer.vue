@@ -20,7 +20,6 @@
       </div>
       <div class="links">
         <NuxtLink class="link" to="/">Home</NuxtLink>
-        <NuxtLink class="link" to="/about">About</NuxtLink>
         <NuxtLink class="link" to="/contact">Contact</NuxtLink>
         <NuxtLink class="link" to="/blog">Blog</NuxtLink>
       </div>
